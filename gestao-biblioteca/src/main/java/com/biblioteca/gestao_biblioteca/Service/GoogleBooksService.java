@@ -24,7 +24,7 @@ public class GoogleBooksService {
 
     private final LivrosRepository livrosRepository;
 
-    private final String apiKey = "AIzaSyAUDxHM_A1XB_T4JLobBRV7uCsqWx1KJ-A";
+    private final String apiKey = "";
 
     private final NetHttpTransport HTTP_TRANSPORT = new NetHttpTransport();
     private final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
