@@ -38,7 +38,7 @@ public class GoogleBooksServiceTest {
     @InjectMocks
     private GoogleBooksService googleBooksService;
 
-    private final String apiKey = "AIzaSyAUDxHM_A1XB_T4JLobBRV7uCsqWx1KJ-A";
+    private final String apiKey = "";
 
     @BeforeEach
     public void setUp() {
