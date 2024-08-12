@@ -96,13 +96,13 @@ Este projeto é uma aplicação de gestão de biblioteca desenvolvida em Java ut
 1. Clone o repositório:
 
     ```bash
-    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+    git clone [https://github.com/aleatorio101/gestao-biblioteca-project.git]
     ```
 
 2. Navegue até o diretório do projeto:
 
     ```bash
-    cd nome-do-repositorio
+    cd gestao-biblioteca-project
     ```
 
 3. Configure o banco de dados no arquivo `application.properties`:
