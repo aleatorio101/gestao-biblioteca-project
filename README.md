@@ -18,7 +18,6 @@ Este projeto é uma aplicação de gestão de biblioteca desenvolvida em Java ut
 - `GET /usuarios/{id}`: Busca um usuário pelo ID.
 - `PUT /usuarios/{id}`: Atualiza um usuário existente.
 - `DELETE /usuarios/{id}`: Deleta um usuário pelo ID.
-- `GET /usuarios/test`: Verifica se o endpoint está funcionando.
 
 ### Livros
 
@@ -26,7 +25,9 @@ Este projeto é uma aplicação de gestão de biblioteca desenvolvida em Java ut
 - `GET /livros/{id}`: Busca um livro pelo ID.
 - `PUT /livros/{id}`: Atualiza um livro existente.
 - `DELETE /livros/{id}`: Deleta um livro pelo ID.
-- `GET /livros/recomendacoes/{usuarioId}`: Recomenda livros para um usuário com base na categoria.
+- `GET /livros/recomendacao/{usuarioId}`: Recomenda livros para um usuário com base na categoria.
+- `GET /livros/buscaPorTitulo?titulo={titulo}`: Busca um livro na API do Google Books por título e adiciona ao sistema se não existir.
+- `GET /livros/buscaPorIsbn?Isbn={isbn}`: Busca um livro na API do Google Books por ISBN e adiciona ao sistema se não existir.
 
 ### Empréstimos
 
@@ -35,9 +36,6 @@ Este projeto é uma aplicação de gestão de biblioteca desenvolvida em Java ut
 - `PUT /emprestimos/{id}`: Atualiza as informações de um empréstimo.
 - `DELETE /emprestimos/{id}`: Deleta um empréstimo pelo ID.
 
-### Integração com Google Books
-
-- `GET /livros/buscar`: Busca livros na API do Google Books.
 
 ## Estrutura do Banco de Dados
 
