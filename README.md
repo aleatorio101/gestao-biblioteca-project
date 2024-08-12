@@ -119,3 +119,125 @@ Este projeto é uma aplicação de gestão de biblioteca desenvolvida em Java ut
 
 5. Acesse a aplicação em [http://localhost:8080](http://localhost:8080).
 
+   ## Documentação do Frontend
+
+### 1. Home
+
+**Descrição**: O componente `Home` exibe todos os livros presentes no banco de dados.
+
+**Arquivos**:
+- `src/components/Home.js`
+- `src/App.css` (para estilos)
+
+**Como Funciona**:
+1. **Importações**:
+   - Importa React, hooks (`useState`, `useEffect`), `axios` e o arquivo de estilos.
+
+2. **Estado**:
+   - `livros`: Armazena a lista de livros recebida da API.
+   - `error`: Armazena mensagens de erro, se houver.
+
+3. **`useEffect`**:
+   - Executa a função `fetchLivros` quando o componente é montado.
+   - **`fetchLivros`**:
+     - Faz uma requisição GET para o endpoint `/livros`.
+     - Atualiza o estado `livros` com os dados recebidos.
+     - Atualiza o estado `error` em caso de falha.
+
+4. **Renderização**:
+   - Exibe um título.
+   - Se `error` estiver definido, mostra a mensagem de erro.
+   - Caso contrário, exibe a lista de livros ou uma mensagem de "Nenhum livro encontrado" se a lista estiver vazia.
+
+**Como Fazer Funcionar**:
+1. **Configuração do Axios**:
+   - Certifique-se de que o Axios está configurado corretamente para fazer chamadas à API.
+   
+2. **Rota da API**:
+   - Verifique se a API está rodando e a rota `/livros` está funcionando.
+
+3. **Estilos**:
+   - Certifique-se de que o arquivo `App.css` está corretamente importado e aplicado.
+
+### 2. Navbar
+
+**Descrição**: O componente `Navbar` fornece links de navegação para diferentes seções da aplicação.
+
+**Arquivos**:
+- `src/components/Navbar.js`
+
+**Como Funciona**:
+1. **Importações**:
+   - Importa React e `Link` do `react-router-dom`.
+
+2. **Renderização**:
+   - Cria uma barra de navegação com links para as páginas principais da aplicação.
+
+**Como Fazer Funcionar**:
+1. **Configuração do React Router**:
+   - Certifique-se de que o `react-router-dom` está instalado e configurado no projeto.
+
+2. **Roteamento**:
+   - Verifique se as rotas definidas correspondem às rotas esperadas na aplicação.
+
+### 3. GoogleBooksSearch
+
+**Descrição**: Permite buscar livros na API do Google Books e adicioná-los à biblioteca.
+
+**Arquivos**:
+- `src/components/GoogleBooksSearch.js`
+- `src/App.css` (para estilos)
+
+**Como Funciona**:
+1. **Importações**:
+   - Importa React, hooks (`useState`), `axios` e o arquivo de estilos.
+
+2. **Estado**:
+   - `titulo`: Armazena o título do livro a ser pesquisado.
+   - `resultados`: Armazena a lista de livros retornados pela busca.
+
+3. **`handleSearch`**:
+   - Envia uma requisição GET para buscar livros com o título fornecido.
+   - Atualiza o estado `resultados` com os dados recebidos.
+
+4. **`adicionarLivro`**:
+   - Envia uma requisição POST para adicionar um livro à biblioteca.
+
+5. **Renderização**:
+   - Exibe um formulário para pesquisar livros.
+   - Mostra os resultados da busca com a opção de adicionar livros à biblioteca.
+
+**Como Fazer Funcionar**:
+1. **Configuração do Axios**:
+   - Certifique-se de que o Axios está configurado corretamente para fazer chamadas à API.
+
+2. **Rota da API**:
+   - Verifique se as rotas para buscar e adicionar livros estão funcionando.
+
+3. **Estilos**:
+   - Certifique-se de que o arquivo `App.css` está corretamente importado e aplicado.
+
+### 4. App
+
+**Descrição**: Define as rotas principais da aplicação e importa os componentes.
+
+**Arquivos**:
+- `src/App.js`
+
+**Como Funciona**:
+1. **Importações**:
+   - Importa React, `BrowserRouter`, `Route`, `Routes`, e os componentes principais.
+
+2. **Renderização**:
+   - Configura as rotas da aplicação usando `react-router-dom`.
+
+**Como Fazer Funcionar**:
+1. **Configuração do React Router**:
+   - Certifique-se de que o `react-router-dom` está instalado e configurado no projeto.
+   - Verifique se as rotas correspondem aos componentes corretos.
+
+---
+
+Essa documentação fornece uma visão geral de como os componentes funcionam e como configurá-los. Certifique-se de seguir as instruções para garantir que tudo funcione corretamente.
+
+
