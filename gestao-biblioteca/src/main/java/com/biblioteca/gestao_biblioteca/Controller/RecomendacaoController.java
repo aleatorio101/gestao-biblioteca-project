@@ -13,7 +13,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/recomendacao")
+@RequestMapping("/livros/recomendacao")
 public class RecomendacaoController {
 
     private RecomendacaoService recomendacaoService;

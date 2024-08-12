@@ -111,20 +111,24 @@ public class GoogleBooksService {
         }
         return Optional.empty();
     }
-
     private Date parsePublishedDate(String publishedDate) {
         if (publishedDate == null || publishedDate.isEmpty()) {
             return null;
         }
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            return dateFormat.parse(publishedDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-            return null;
+        String[] possibleFormats = {"yyyy-MM-dd", "yyyy-MM", "yyyy"};
+        for (String format : possibleFormats) {
+            try {
+                SimpleDateFormat dateFormat = new SimpleDateFormat(format);
+                return dateFormat.parse(publishedDate);
+            } catch (ParseException e) {
+                // Tenta o próximo formato
+            }
         }
+
+        // Se nenhum formato funcionar, logar o erro e retornar null
+        System.err.println("Data não pôde ser analisada: " + publishedDate);
+        return null;
     }
 }
-
 

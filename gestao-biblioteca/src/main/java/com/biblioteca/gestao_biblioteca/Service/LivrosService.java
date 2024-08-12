@@ -5,6 +5,7 @@ import com.biblioteca.gestao_biblioteca.model.Livros;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -59,6 +60,9 @@ public class LivrosService {
         }
 
         throw new RuntimeException("Livro não encontrado.");
+    }
+    public List<Livros> listarTodosLivros() {
+        return livrosRepository.findAll();
     }
 }
 

@@ -52,8 +52,8 @@ public class GoogleBooksServiceTest {
         // Configuração do mock para a resposta da API
         Volume volume = new Volume();
         Volume.VolumeInfo volumeInfo = new Volume.VolumeInfo();
-        volumeInfo.setTitle("Livro teste");
-        volumeInfo.setAuthors(List.of("Alexandro Garro Brito"));
+        volumeInfo.setTitle("Livro Teste");
+        volumeInfo.setAuthors(List.of("Autor teste"));
         volumeInfo.setIndustryIdentifiers(List.of(
                 new Volume.VolumeInfo.IndustryIdentifiers().setType("ISBN_13").setIdentifier(isbn)
         ));
@@ -78,8 +78,8 @@ public class GoogleBooksServiceTest {
         // Verificar o resultado
         assertTrue(resultado.isPresent(), "O livro deveria ser encontrado pelo ISBN.");
         Livros livro = resultado.get();
-        assertEquals("Livro teste", livro.getTitulo(), "Título do livro está incorreto.");
-        assertEquals("Alexandro Garro Brito", livro.getAutor(), "Autor do livro está incorreto.");
+        assertEquals("Livro Teste", livro.getTitulo(), "Título do livro está incorreto.");
+        assertEquals("Autor teste", livro.getAutor(), "Autor do livro está incorreto.");
         assertEquals(isbn, livro.getIsbn(), "ISBN do livro está incorreto.");
 
         // Validar a data
@@ -99,7 +99,7 @@ public class GoogleBooksServiceTest {
         Volume volume = new Volume();
         Volume.VolumeInfo volumeInfo = new Volume.VolumeInfo();
         volumeInfo.setTitle(titulo);
-        volumeInfo.setAuthors(List.of("Alexandro Garro Brito"));  // Atualize o autor aqui
+        volumeInfo.setAuthors(List.of("Autor teste"));  // Atualize o autor aqui
         volumeInfo.setIndustryIdentifiers(List.of(
                 new Volume.VolumeInfo.IndustryIdentifiers().setType("ISBN_13").setIdentifier("1234567890123")
         ));
@@ -123,13 +123,13 @@ public class GoogleBooksServiceTest {
         assertTrue(resultado.isPresent(), "O livro deveria ser encontrado pelo título.");
         Livros livro = resultado.get();
         assertEquals(titulo, livro.getTitulo(), "Título do livro está incorreto.");  // Ajuste o título esperado aqui
-        assertEquals("Alexandro Garro Brito", livro.getAutor(), "Autor do livro está incorreto.");  // Atualize o autor esperado aqui
+        assertEquals("Autor Teste", livro.getAutor(), "Autor do livro está incorreto.");  // Atualize o autor esperado aqui
         assertEquals("N/A", livro.getIsbn(), "ISBN do livro está incorreto.");
 
         // Validar a data
         assertNull(livro.getDataPublicacao(), "Data de publicação não deveria ser null.");
 
-        assertEquals("Technology & Engineering", livro.getCategoria(), "Categoria do livro está incorreta.");
+        assertEquals("Categoria Teste", livro.getCategoria(), "Categoria do livro está incorreta.");
         verify(livrosRepository).save(any(Livros.class));
     }
 
