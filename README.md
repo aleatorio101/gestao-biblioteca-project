@@ -236,8 +236,60 @@ Este projeto é uma aplicação de gestão de biblioteca desenvolvida em Java ut
    - Certifique-se de que o `react-router-dom` está instalado e configurado no projeto.
    - Verifique se as rotas correspondem aos componentes corretos.
 
----
+## Configuração e Execução do Frontend
 
-Essa documentação fornece uma visão geral de como os componentes funcionam e como configurá-los. Certifique-se de seguir as instruções para garantir que tudo funcione corretamente.
+1. Clone o repositório:
+
+    ```bash
+    git clone https://github.com/aleatorio101/gestao-biblioteca-project.git
+    ```
+
+2. Navegue até o diretório do frontend:
+
+    ```bash
+    cd gestao-biblioteca-project/biblioteca-frontend
+    ```
+
+3. Instale as dependências:
+
+    ```bash
+    npm install
+    ```
+
+4. Configure o `axios` para a URL base da API:
+
+    - Abra o arquivo `src/axios.js` (crie o arquivo se não existir) e adicione:
+
+      ```javascript
+      import axios from 'axios';
+
+      const instance = axios.create({
+        baseURL: 'http://localhost:8080', // Altere para a URL do backend, se necessário
+      });
+
+      export default instance;
+      ```
+
+    - No seu código, substitua todas as instâncias diretas do `axios` pela instância criada:
+
+      ```javascript
+      import axios from './axios'; // Ajuste o caminho se necessário
+      ```
+
+5. Inicie o servidor de desenvolvimento:
+
+    ```bash
+    npm start
+    ```
+
+6. Acesse a aplicação no navegador:
+
+    - Abra o navegador e vá para `http://localhost:3000`.
+
+### Observações
+
+- **API Backend**: Certifique-se de que o backend (Spring Boot) está rodando e acessível na URL configurada.
+- **Configuração do Ambiente**: Verifique se o `baseURL` no arquivo `axios.js` corresponde à URL onde o backend está rodando.
+- **Instalação de Dependências**: O comando `npm install` instala todas as dependências listadas no arquivo `package.json`. 
 
 
