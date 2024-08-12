@@ -71,7 +71,7 @@ Este projeto é uma aplicação de gestão de biblioteca desenvolvida em Java ut
 | livro_id           | BIGINT     | ID do livro emprestado (Foreign Key)          |
 | data_emprestimo    | TIMESTAMP  | Data do empréstimo                            |
 | data_devolucao     | TIMESTAMP  | Data de devolução prevista                    |
-| status             | VARCHAR    | Status do empréstimo (e.g., "ativo", "concluído")|
+| status             | VARCHAR    | Status do empréstimo (e.g., "EMPRESTADO", "DEVOLVIDO")|
 
 ## Tecnologias Utilizadas
 
