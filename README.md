@@ -14,7 +14,7 @@ Este projeto é uma aplicação de gestão de biblioteca desenvolvida em Java ut
 
 ### Usuários
 
-- `POST /usuarios`: Criação de um novo usuário.
+- `POST /criacao/usuarios`: Criação de um novo usuário.
 - `GET /usuarios/{id}`: Busca um usuário pelo ID.
 - `PUT /usuarios/{id}`: Atualiza um usuário existente.
 - `DELETE /usuarios/{id}`: Deleta um usuário pelo ID.
