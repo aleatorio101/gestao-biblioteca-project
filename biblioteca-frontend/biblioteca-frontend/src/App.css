@@ -37,8 +37,7 @@
   }
 }
 
-/* Estilos Globais */
-/* Estilos Globais */
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f4f4f4;
@@ -53,7 +52,7 @@ body {
   text-decoration: none;
 }
 
-/* Container Principal */
+
 .main-container {
   background-color: #fff;
   padding: 20px;
@@ -65,7 +64,7 @@ body {
   margin-top: 10px;
 }
 
-/* Formulário de Busca */
+
 form {
   display: flex;
   gap: 10px;
@@ -101,7 +100,7 @@ button {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
-  height: 100%; /* Garante que o botão tenha a mesma altura do input */
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
