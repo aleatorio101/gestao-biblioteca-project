@@ -10,16 +10,16 @@ function GoogleBooksSearch() {
         e.preventDefault();
         try {
             const response = await axios.get(`/livros/buscaPorTitulo?titulo=${titulo}`);
-            // Log para depuração
+            
             console.log('Resposta da API:', response.data);
             
-            // Verifica se a resposta é um array e define os resultados
+            
             const livros = Array.isArray(response.data) ? response.data : [];
             setResultados(livros);
             setMensagem(livros.length === 0 ? 'Nenhum resultado encontrado' : '');
         } catch (error) {
             console.error('Erro ao buscar livros:', error);
-            setResultados([]); // Limpa os resultados em caso de erro
+            setResultados([]); 
             setMensagem('Erro ao buscar livros');
         }
     };
